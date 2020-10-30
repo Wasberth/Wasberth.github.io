@@ -55,7 +55,7 @@ function codificar() {
 function decodificar() {
     let txt = String(document.getElementById("cadena").value).toLowerCase();
     if (txt.match(/([a-z])/ig)) {
-        document.getElementById("resultado").innerHTML = c.encode(
+        document.getElementById("resultado").innerHTML = c.decode(
             txt, parseInt(document.getElementById("skip").value));
     } else {
         alert("Por favor ingresar sólo una palabra y únicamente letras");
