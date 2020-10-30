@@ -42,15 +42,22 @@ let c = (function () {
 })();
 
 function codificar() {
-    //obtener el texto del textarea
-    document.getElementById("resultado").innerHTML = c.encode(
-        String(document.getElementById("cadena").value).toLowerCase(), parseInt(document.getElementById("skip").value));
+    let txt = String(document.getElementById("cadena").value).toLowerCase();
+    if (txt.match(/([a-z])/ig)) {
+        document.getElementById("resultado").innerHTML = c.encode(
+            txt, parseInt(document.getElementById("skip").value));
+    } else {
+        alert("Por favor ingresar sólo una palabra y únicamente letras");
+    }
 
 }
 
 function decodificar() {
-    //obtener el texto del textarea
-    document.getElementById("resultado").innerHTML = c.decode(
-        String(document.getElementById("cadena").value).toLowerCase(), parseInt(document.getElementById("skip").value));
-
+    let txt = String(document.getElementById("cadena").value).toLowerCase();
+    if (txt.match(/([a-z])/ig)) {
+        document.getElementById("resultado").innerHTML = c.encode(
+            txt, parseInt(document.getElementById("skip").value));
+    } else {
+        alert("Por favor ingresar sólo una palabra y únicamente letras");
+    }
 }
