@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cifrado César</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilo.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="#">Piña</a>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="#"> - </a>
+                    <a class="nav-item nav-link active" href="#">Cifrado César</a>
+                </div>
+            </div>
+        </nav>
+        <div class="row mt-5">
+            <div class="col bg-primary">
+                <p><span class="title align-middle">Ingrese aquí el texto:</span></p>
+            </div>
+            <div class="col bg-primary">
+                <p class="title"><span class="title align-middle">Éste es el texto codificado</span></p>
+            </div>
+            <div class="w-100"></div>
+        </div>
+        <div class="row">
+            <textarea class="col border border-dark text" name="cadena" id="cadena"></textarea>
+            <textarea class="col border border-dark text" name="resultado" id="resultado"></textarea>
+        </div>
+        <div class="row">
+            <div class="col mt-3">
+                <div class="form-inline">
+                    <div class="form-group mx-2">
+                        <label for="skip">Saltos</label>
+                        <input type="number" id="skip" class="form-control mx-sm-3"
+                            aria-describedby="passwordHelpInline" placeholder="Saltos" value="3">
+                    </div>
+                    <div class="form-group mx-2">
+                        <button type="submit" class="btn btn-primary mb-2" onclick="codificar()">Cifrar</button>
+                    </div>
+                    <div class="form-group mx-2">
+                        <button type="submit" class="btn btn-danger mb-2" onclick="decodificar()">Decifrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="js/logica.js"></script>
+</body>
+
+</html>
